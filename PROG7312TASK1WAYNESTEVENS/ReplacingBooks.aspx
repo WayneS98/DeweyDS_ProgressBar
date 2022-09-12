@@ -73,11 +73,8 @@
             
   <p>Your Current Progress</p> 
   <div class="auto-style1">
-  <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
-  aria-valuenow="15" aria-valuemin="0" aria-valuemax="60" id="progressBar" runat="server" style="width:100%">
-    <p id="lblPercentage" runat="server">
-        
-      </p>
+  <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="60" id="progressBar" runat="server">
+    <p id="lblPercentage" runat="server"></p>
   </div>
 </div>
    

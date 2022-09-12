@@ -18,12 +18,8 @@ namespace PROG7312TASK1WAYNESTEVENS
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Creating a Session to add points 
-            if (Session["score"] == null)
-            {
-                Session["score"] = 15;          
+            
         }
-    }
 
         
         protected void BtnGen_Click(object sender, EventArgs e)
@@ -92,9 +88,9 @@ namespace PROG7312TASK1WAYNESTEVENS
         protected void BtnInspect_Click(object sender, EventArgs e)
             
         {
-            int score;
-            int.TryParse(Session["score"].ToString(), out score);
-            LblLevelup.Text = (score).ToString();
+            //int score;
+            //int.TryParse(Session["score"].ToString(), out score);
+            LblLevelup.Text = (total).ToString();
 
           //  BtnInspect.Enabled = false;
             
@@ -121,8 +117,8 @@ namespace PROG7312TASK1WAYNESTEVENS
             //Algorithm and this we using the Bubble sort Array
             double[] ar = new double[] { numb1, numb2, numb3, numb4, numb5, numb6, numb7, numb8, numb9, numb10 };
 
-            BubbleSort(ar);
-            foreach (int n in ar)
+            //BubbleSort(ar);
+            //foreach (int n in ar)
             Lbl1.Text = ar[0].ToString();
             Lbl2.Text = ar[1].ToString();
             Lbl3.Text = ar[2].ToString();
@@ -134,8 +130,7 @@ namespace PROG7312TASK1WAYNESTEVENS
             Lbl9.Text = ar[8].ToString();
             Lbl10.Text = ar[9].ToString();
 
-            UpdateProgressBar(Convert.ToDouble(score), 60.0);
-            Session["Score"] = score;
+        
 
             if (Txt1.Text == Lbl1.Text && Txt2.Text == Lbl2.Text &&
                 Txt3.Text == Lbl3.Text && Txt4.Text == Lbl4.Text &&
@@ -145,7 +140,8 @@ namespace PROG7312TASK1WAYNESTEVENS
             {               
                 LblWR.Text = "WELL DONE YOUR NUMBERS ARE IN THE CORRECT ORDER ! " ;              
                 LblWR.ForeColor = Color.DarkGreen;
-                total += 15;             
+                total += 15;
+                UpdateProgressBar(Convert.ToDouble(total), 60.0);
             }
             else
             {
