@@ -37,9 +37,11 @@
         </div>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
-        &nbsp;<asp:Button ID="BtnGen" runat="server" BackColor="Blue" OnClick="BtnGen_Click" Text="Generate Call Numbers" ForeColor="White" />
+        &nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="BtnGen" runat="server" BackColor="Blue" OnClick="BtnGen_Click" Text="Generate Call Numbers" ForeColor="White" />
         &nbsp;<br />
         <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;
         Numbers are here to show user<br />
         <br />
         1-- <asp:Label ID="Lbl1" runat="server" Text="First Number" BorderColor="Black" BorderStyle="Solid"></asp:Label>
@@ -58,7 +60,7 @@
         <asp:Label ID="Lbl7" runat="server" Text="Seventh Number" BorderColor="Red" BorderStyle="Solid"></asp:Label>
         &nbsp;8--
         <asp:Label ID="Lbl8" runat="server" Text="Eight Number" BorderColor="#CC3300" BorderStyle="Solid"></asp:Label>
-        &nbsp;9--
+        &nbsp; 9--
         <asp:Label ID="Lbl9" runat="server" Text="Ninth Number" BorderColor="#660033" BorderStyle="Solid"></asp:Label>
         &nbsp;10--
         <asp:Label ID="Lbl10" runat="server" Text="Tenth Number" BorderColor="#CC99FF" BorderStyle="Solid"></asp:Label>
@@ -71,9 +73,11 @@
             
   <p>Your Current Progress</p> 
   <div class="auto-style1">
-  <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-  aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-    75% Complete (success)
+  <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+  aria-valuenow="15" aria-valuemin="0" aria-valuemax="60" id="progressBar" runat="server" style="width:100%">
+    <p id="lblPercentage" runat="server">
+        
+      </p>
   </div>
 </div>
    
@@ -87,21 +91,23 @@
 &nbsp;<asp:TextBox ID="Txt2" runat="server" BorderColor="Lime"></asp:TextBox>
         <asp:TextBox ID="Txt3" runat="server" BorderColor="Aqua"></asp:TextBox>
         <asp:TextBox ID="Txt4" runat="server" BorderColor="Blue"></asp:TextBox>
-&nbsp;<asp:TextBox ID="Txt5" runat="server" BorderColor="#FF33CC"></asp:TextBox>
+        <asp:TextBox ID="Txt5" runat="server" BorderColor="#FF33CC"></asp:TextBox>
         <br />
-&nbsp;<asp:TextBox ID="Txt6" runat="server" BorderColor="#660066"></asp:TextBox>
-        <asp:TextBox ID="Txt7" runat="server" BorderColor="Red"></asp:TextBox>
+&nbsp; <asp:TextBox ID="Txt6" runat="server" BorderColor="#660066"></asp:TextBox>
+        &nbsp;<asp:TextBox ID="Txt7" runat="server" BorderColor="Red"></asp:TextBox>
         <asp:TextBox ID="Txt8" runat="server" BorderColor="#993300"></asp:TextBox>
         <asp:TextBox ID="Txt9" runat="server" BorderColor="Maroon" ></asp:TextBox>
-        .<asp:TextBox ID="Txt10" runat="server" BorderColor="#CC33FF"></asp:TextBox>
+        <asp:TextBox ID="Txt10" runat="server" BorderColor="#CC33FF"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="BtnInspect" runat="server" BackColor="Red" Text="Check Order" ForeColor="White" OnClick="BtnInspect_Click" />
+        &nbsp;&nbsp;
+        <asp:Button ID="BtnInspect" runat="server" BackColor="Red" Text="Check The Order" ForeColor="White" OnClick="BtnInspect_Click" />
         <br />
        
  
 <br />
         <br />
+        
         <br />
         <br />
     

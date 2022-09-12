@@ -150,6 +150,24 @@ namespace PROG7312TASK1WAYNESTEVENS
         protected global::System.Web.UI.WebControls.Label Lbl10;
 
         /// <summary>
+        /// progressBar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl progressBar;
+
+        /// <summary>
+        /// lblPercentage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblPercentage;
+
+        /// <summary>
         /// LblWR control.
         /// </summary>
         /// <remarks>
