@@ -173,8 +173,7 @@ namespace PROG7312TASK1WAYNESTEVENS
           if(total == 60)
             {
                 LblLevelup.Text = "LEVEL 4, MAX POINTS REACHED! : " + total;
-                LblLevelup.ForeColor = Color.DarkBlue;      
-                //PROGRESS BAR WILL BE AT 100%
+                LblLevelup.ForeColor = Color.DarkBlue;                    
             }   
           
         }
