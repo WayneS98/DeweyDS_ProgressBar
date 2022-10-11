@@ -26,7 +26,7 @@ namespace PROG7312TASK1WAYNESTEVENS
 
         {
             //Neater Pull from method to button
-            GetNumbers();
+            GetNumbers();         
         }
         
         public void GetNumbers()
@@ -37,9 +37,7 @@ namespace PROG7312TASK1WAYNESTEVENS
             //This is used to get random numbers
             Random rnd = new Random();
             int[] numbers = new int[10];
-         //   BtnInspect.Enabled = true;
-
-
+                 
             //This will Create and display random numbers that are between the Ranges of 0 to 999
             //We will need 10 random numbers
             //References Thedeveloperblog.com. 2022. C# Random Number Examples. [online] Available at: <https://thedeveloperblog.com/c-sharp/random#:~:text=C%23%20program%20that%20uses%20modulo%20with%20Random%20using,%3C%2010%3B%20i%2B%2B%29%20%7B%20int%20result%20%3D%20random.> [Accessed 29 August 2022].
@@ -54,9 +52,6 @@ namespace PROG7312TASK1WAYNESTEVENS
             double numb9 = rnd.Next(0, 1000);
             double numb10 = rnd.Next(0, 1000);
             //Reference numbers, S., Hornby, J., Winney, G., Kingen, D. and S., D., 2022. Sort a collection of randomly generated numbers. [online] Stack Overflow. Available at: <https://stackoverflow.com/questions/15484635/sort-a-collection-of-randomly-generated-numbers> [Accessed 29 August 2022]
-
-            Txt1.Text = CreateLetters();
-
 
             //This displays the list in Labels so the user can see the numbers and change them Accordinlgy 
             Lbl1.Text = numb1.ToString();           
@@ -82,17 +77,33 @@ namespace PROG7312TASK1WAYNESTEVENS
             Txt8.Text = numb8.ToString();
             Txt9.Text = numb9.ToString();
             Txt10.Text = numb10.ToString();
-            
+
+
+            //Using a label in order to get a random Letters,WONT REARRANGE USER WILL JUST NEED TO ADD LETTERS 
+            //WHEN NUMBERS ARE IN ORDER       
+            LblLet1.Text = CreateLetters();
+            LblLet2.Text = CreateLetters();
+            LblLet3.Text = CreateLetters();
+            LblLet4.Text = CreateLetters();
+            LblLet5.Text = CreateLetters();
+            LblLet6.Text = CreateLetters();
+            LblLet7.Text = CreateLetters();
+            LblLet8.Text = CreateLetters();
+            LblLet9.Text = CreateLetters();
+            LblLet10.Text = CreateLetters();  
+
+
+
+
+
+
         }
-       
+
         protected void BtnInspect_Click(object sender, EventArgs e)
             
-        {
-            //int score;
-            //int.TryParse(Session["score"].ToString(), out score);
+        {            
             LblLevelup.Text = (total).ToString();
-
-          //  BtnInspect.Enabled = false;
+  
             
       
             //For the Method to check the numbers we adding the Algorithm of the Bubble Sort method 
@@ -110,15 +121,11 @@ namespace PROG7312TASK1WAYNESTEVENS
             double numb9 = Convert.ToDouble(Lbl9.Text);
             double numb10 = Convert.ToDouble(Lbl10.Text);
 
-            //This now Creates Random Letters with the numbers
-            //Txt1.Text = CreateLetters();
-
-
             //Algorithm and this we using the Bubble sort Array
             double[] ar = new double[] { numb1, numb2, numb3, numb4, numb5, numb6, numb7, numb8, numb9, numb10 };
 
-            //BubbleSort(ar);
-            //foreach (int n in ar)
+            BubbleSort(ar);
+            foreach (int n in ar)
             Lbl1.Text = ar[0].ToString();
             Lbl2.Text = ar[1].ToString();
             Lbl3.Text = ar[2].ToString();
@@ -130,6 +137,7 @@ namespace PROG7312TASK1WAYNESTEVENS
             Lbl9.Text = ar[8].ToString();
             Lbl10.Text = ar[9].ToString();
 
+
         
 
             if (Txt1.Text == Lbl1.Text && Txt2.Text == Lbl2.Text &&
@@ -139,7 +147,7 @@ namespace PROG7312TASK1WAYNESTEVENS
                 Txt9.Text == Lbl9.Text && Txt10.Text == Lbl10.Text)
             {               
                 LblWR.Text = "WELL DONE YOUR NUMBERS ARE IN THE CORRECT ORDER ! " ;              
-                LblWR.ForeColor = Color.DarkGreen;
+                LblWR.ForeColor = Color.DarkGreen;                         
                 total += 15;
                 UpdateProgressBar(Convert.ToDouble(total), 60.0);
             }
@@ -154,7 +162,7 @@ namespace PROG7312TASK1WAYNESTEVENS
             if(total <= 15)
             {              
                 LblLevelup.Text = " Ranked Up Level 1 : " + total;
-                LblLevelup.ForeColor = Color.Teal;              
+                LblLevelup.ForeColor = Color.Yellow;              
             }
             if (total == 30)
             {              
@@ -164,36 +172,36 @@ namespace PROG7312TASK1WAYNESTEVENS
           if (total == 45)
             {             
                 LblLevelup.Text = "Ranked Up Level 3 : " + total;
-                LblLevelup.ForeColor = Color.MediumPurple;
+                LblLevelup.ForeColor = Color.Purple;
             } 
           if(total == 60)
             {
                 LblLevelup.Text = "LEVEL 4, MAX POINTS REACHED! : " + total;
-                LblLevelup.ForeColor = Color.DarkBlue;                    
+                LblLevelup.ForeColor = Color.Blue;                    
             }   
           
         }
-        //this method will create the random letters next to each number with only 4 letters
+
+        //this method will create the random letters next to each number with only 3 letters
         //References C-sharpcorner.com. 2022. Random Password In C#. [online] Available at: <https://www.c-sharpcorner.com/article/how-to-generate-a-random-password-in-c-sharp-and-net-core/> [Accessed 30 August 2022].
-        private static string CreateLetters(int length = 4)
+
+        public static string CreateLetters(int length = 3)
         {
-            //This will create a string which allows characters and numbers 
-            //References --
             string Letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             Random rnd = new Random();
-            //This allows for the Length of letters
-            int size = rnd.Next(5, Letters.Length);
-            char[] lets = new char[size];
-            for(int i =0; i < length; i++)
-            {
-                lets[i] = Letters[rnd.Next(0, Letters.Length)];
-            }
-            return new string(lets);
+            var randomLetters = new string(Enumerable.Repeat(Letters, length)
+                                                    .Select(s => s[rnd.Next(s.Length)]).ToArray());
+            return randomLetters;
         }
+ 
+
+
+
+
         //We are now going to use a Algorithm and this we using the Bubble sort 
         //References --- GeeksforGeeks. 2022. Bubble Sort Algorithm - GeeksforGeeks. [online] Available at: <https://www.geeksforgeeks.org/bubble-sort/> [Accessed 30 August 2022].
 
-       void BubbleSort(double[] arr)
+        void BubbleSort(double[] arr)
         {
             int temp;
             for (int i = 0; i < arr.Length - 1; i++)
@@ -208,11 +216,10 @@ namespace PROG7312TASK1WAYNESTEVENS
                     }
                 }
             }
-
-        }
+        }       
         private void UpdateProgressBar(double score, double maxScore)
         {
-            //get percentage
+            //Gets the percentage to show on the progress bar each time it is updated
             var Percentage = ((score / maxScore) * 100.0);
 
             progressBar.Attributes.Add("style", String.Format("width:{0}%", Percentage));

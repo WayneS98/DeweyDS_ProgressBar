@@ -20,5 +20,11 @@ namespace PROG7312TASK1WAYNESTEVENS
             Response.Redirect("ReplacingBooks.aspx");          
            
         }
+
+        protected void BtnIdentify_Click(object sender, EventArgs e)
+        {
+            //THIS WILL REDIRECT THE CLIENT TO THE INDENTIFYING AREA PAGE
+            Response.Redirect("IdentifyingAreas.aspx");
+        }
     }
 } 

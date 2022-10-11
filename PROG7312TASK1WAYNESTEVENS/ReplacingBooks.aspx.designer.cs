@@ -24,15 +24,6 @@ namespace PROG7312TASK1WAYNESTEVENS
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// LblLevelup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblLevelup;
-
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -69,6 +60,15 @@ namespace PROG7312TASK1WAYNESTEVENS
         protected global::System.Web.UI.WebControls.Label Lbl1;
 
         /// <summary>
+        /// LblLet1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet1;
+
+        /// <summary>
         /// Lbl2 control.
         /// </summary>
         /// <remarks>
@@ -76,6 +76,15 @@ namespace PROG7312TASK1WAYNESTEVENS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Lbl2;
+
+        /// <summary>
+        /// LblLet2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet2;
 
         /// <summary>
         /// Lbl3 control.
@@ -87,6 +96,15 @@ namespace PROG7312TASK1WAYNESTEVENS
         protected global::System.Web.UI.WebControls.Label Lbl3;
 
         /// <summary>
+        /// LblLet3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet3;
+
+        /// <summary>
         /// Lbl4 control.
         /// </summary>
         /// <remarks>
@@ -94,6 +112,15 @@ namespace PROG7312TASK1WAYNESTEVENS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Lbl4;
+
+        /// <summary>
+        /// LblLet4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet4;
 
         /// <summary>
         /// Lbl5 control.
@@ -105,6 +132,15 @@ namespace PROG7312TASK1WAYNESTEVENS
         protected global::System.Web.UI.WebControls.Label Lbl5;
 
         /// <summary>
+        /// LblLet5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet5;
+
+        /// <summary>
         /// Lbl6 control.
         /// </summary>
         /// <remarks>
@@ -112,6 +148,15 @@ namespace PROG7312TASK1WAYNESTEVENS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Lbl6;
+
+        /// <summary>
+        /// LblLet6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet6;
 
         /// <summary>
         /// Lbl7 control.
@@ -123,6 +168,15 @@ namespace PROG7312TASK1WAYNESTEVENS
         protected global::System.Web.UI.WebControls.Label Lbl7;
 
         /// <summary>
+        /// LblLet7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet7;
+
+        /// <summary>
         /// Lbl8 control.
         /// </summary>
         /// <remarks>
@@ -130,6 +184,15 @@ namespace PROG7312TASK1WAYNESTEVENS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Lbl8;
+
+        /// <summary>
+        /// LblLet8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet8;
 
         /// <summary>
         /// Lbl9 control.
@@ -141,6 +204,15 @@ namespace PROG7312TASK1WAYNESTEVENS
         protected global::System.Web.UI.WebControls.Label Lbl9;
 
         /// <summary>
+        /// LblLet9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet9;
+
+        /// <summary>
         /// Lbl10 control.
         /// </summary>
         /// <remarks>
@@ -148,6 +220,24 @@ namespace PROG7312TASK1WAYNESTEVENS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Lbl10;
+
+        /// <summary>
+        /// LblLet10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLet10;
+
+        /// <summary>
+        /// LblLevelup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblLevelup;
 
         /// <summary>
         /// progressBar control.
