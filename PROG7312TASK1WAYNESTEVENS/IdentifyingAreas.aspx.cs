@@ -38,7 +38,7 @@ namespace PROG7312TASK1WAYNESTEVENS
         //We are creating a global counter to make sure listboxes break at the given numbers
         public static int counter = 0;
         //Declaring the Dictionary here
-        public Dictionary<int, string> callNumbers = new Dictionary<int, string>();
+        public static Dictionary<int, string> callNumbers = new Dictionary<int, string>();
         public List<string> unqiueRandom = new List<string>();
 
             public int Key { get; set; }
@@ -61,6 +61,8 @@ namespace PROG7312TASK1WAYNESTEVENS
             //THIS ALLOWS THE LIST TO BE CLEARED AND NEW INFORMATION TO BE ADDED
             List1.Items.Clear();
             List2.Items.Clear();
+            List<int> List1Items = new List<int>();
+            List<string> List2Items = new List<string>();
             //We are going to implement dictionary to store all our values 
             //References --
 
@@ -93,37 +95,59 @@ namespace PROG7312TASK1WAYNESTEVENS
                
             }*/
             //THIS LOOP IS USED TO CREATE RANDOM CALL NUMBERS FROM THE DICTIONARY            
-           for (var i = 0; i < 4; i++)          
+           while(List1Items.Count < 5)         
             {                
                 var k = callNumbers.ToList()[random.Next(callNumbers.Count)];
                 callNumbers.ContainsKey(k.Key);
-                List1.Items.Add(k.Key.ToString());
-                List1.SelectedIndex = 0;
+                if (!List1Items.Contains(k.Key))
+                {
+                    //add item to each list to ensure answers exist in 2nd list box
+                    List1Items.Add(k.Key);
+                    List2Items.Add(k.Value);
+                }
             }
-                                 
-                //THIS FOR LOOP IS USED TO MAKE SURE THE PROGRAM GENERATES 7 DIFFTENT DESCRIPTIONS
-                for (var i = 0; i < 7; i++)
+           //set the list as the datasource for the view.
+            List1.DataSource = List1Items;
+            List1.DataBind();
+            List1.SelectedIndex = 0;
+
+            //THIS FOR LOOP IS USED TO MAKE SURE THE PROGRAM GENERATES 7 DIFFTENT DESCRIPTIONS
+            while (List2Items.Count < 8)
             {
                
+
                 var k = callNumbers.ToList()[random.Next(callNumbers.Count)];
-                //List2.Items.Add(call.Value);
-                callNumbers.ContainsValue(k.Value);
-                List2.Items.Add(k.Value.ToString());
-                List2.SelectedIndex = 0;
+                if (!List2Items.Contains(k.Value))
+                {
+                    List2Items.Add(k.Value);
+                }
+
            
                      
         } 
+            //sort the items in the 2nd list box so the values will be mixed. (this will work instead of randomising)
+            List2Items.Sort();
+            List2.DataSource = List2Items;
+            List2.DataBind();
+            List2.SelectedIndex = 0;
 
-    }
+
+        }
         //This button is used to check if the Answers are correct to the given Questions
         //Refrences --
-        
+
         protected void BtnCheck_Click(object sender, EventArgs e)
         {
-            
-            if//This Qouted out works but buggy as it doesnt read values from dictionary
-             // (List1.SelectedIndex.ToString() == List2.SelectedIndex.ToString())
-              (callNumbers[int.Parse(List1.SelectedIndex.ToString())] == List2.SelectedIndex.ToString())
+            //This Qouted out works but buggy as it doesnt read values from dictionary
+            // (List1.SelectedIndex.ToString() == List2.SelectedIndex.ToString())
+            var selectedNumber = List1.Items[List1.SelectedIndex];
+            var selectedText = List2.Items[List2.SelectedIndex];
+            string correctAnswer;
+
+            callNumbers.TryGetValue(int.Parse(selectedNumber.Value), out correctAnswer);
+             
+
+            if (correctAnswer.Equals(selectedText.Value))
             {
                 
                 LblQA.ForeColor = Color.Green;
